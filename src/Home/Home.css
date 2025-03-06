@@ -1,0 +1,108 @@
+body{
+    margin: 0; 
+
+}
+.home{
+    margin-top: 0px;
+    background-color: #E8EFFE;
+    border-radius: 0px  0px 40px 40px;
+    height: 80vh;
+}
+.home2{
+    margin-top: 100px;
+}
+
+/* first div */
+
+.first-section{
+    margin-top: 80px;
+    text-align: center; /* Ensures text is centered */
+}
+
+.head1{
+    font-size: 20px;
+    margin: 10px 0; /* Provides spacing between the headings */
+}
+
+
+.img-2{
+    height: 300px;
+    width: 300px;
+}
+.input-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+/* input field */
+.input-1{
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    border-radius: 7px 0px 0px 7px;
+    border-radius: 1px white solid;
+}
+
+.btn-3{
+    background-color:#4079DA;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 7px 7px 0px;
+
+}
+.btn-3::after{
+    background-color: #4079DA;
+    
+}
+/* second section */
+
+
+.second-section{
+position: relative;
+top: 0px;
+}
+
+.ntype-text {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive size */
+    font-weight: 800; /* Bold and impactful */
+    color: #4a90e2; /* Stylish blue color */
+    text-transform: uppercase; /* All caps for emphasis */
+    letter-spacing: 3px; /* Spaced-out letters for modern look */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    margin: 20px 0; /* Balanced spacing */
+    display: inline-block; /* Inline element */
+  }
+  
+
+  @media (min-width: 1200px) {
+    .home {
+        height: 90vh; /* Increase height for larger screens */
+    }
+
+    .img-2 {
+        height: 400px; /* Larger images */
+        width: 400px;
+    }
+
+ 
+
+    .input-1 {
+        width: 400px; /* Wider input field */
+    }
+
+    .btn-3 {
+        padding: 15px 30px; /* Bigger button */
+    }
+
+    .ntype-text {
+        font-size: clamp(3rem, 6vw, 5rem); /* Larger text for headings */
+    }
+}
+
+

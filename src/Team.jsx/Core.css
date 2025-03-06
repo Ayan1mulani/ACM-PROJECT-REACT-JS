@@ -1,0 +1,188 @@
+.coreTeam {
+    padding: 30px;
+    height: 65VH;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+
+  @media (max-width: 480px) {
+    .coreTeam {
+        height: 60vh; /* Small screens (mobile devices) */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .coreTeam {
+        height: 70vh; /* Tablets and small Mac screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .coreTeam {
+        height: 100vh; /* Regular laptop screens */
+    }
+}
+
+@media (min-width: 1201px) {
+    .coreTeam {
+        height: 90vh; /* Large screens (iMac, big monitors) */
+    }
+}
+  
+  .Text h3 {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 45px 0;
+    overflow: hidden;
+  }
+  
+  .slider-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s ease-in-out;
+    padding: clamp(5px, 1vw, 10px);
+    cursor: pointer;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  /* Inactive slides */
+  .slide:not(.active) {
+    transform: scale(0.8);
+    filter: blur(1px) brightness(0.85);
+    opacity: 0.8;
+  }
+  
+  /* Active slide */
+  .slide.active {
+    transform: scale(1.4);
+    z-index: 1;
+    filter: none;
+    opacity: 1;
+  }
+  
+  .img-33 {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Member Info */
+  .member-info {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .name {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #333;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .position {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Dots Navigation */
+  .dots-container {
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  
+  .dot.active {
+    background-color: #4a90e2;
+    transform: scale(1.3);
+  }
+  
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .slide.active {
+      transform: scale(1.4);
+    }
+    .slide:not(.active) {
+      transform: scale(0.75);
+    }
+    .img-33 {
+      max-width: 250px;
+    }
+  
+    .name {
+      font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+  
+    .position {
+      font-size: clamp(0.6rem, 1.8vw, 0.8rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slide.active {
+      transform: scale(1.7);
+    }
+    .slide:not(.active) {
+      transform: scale(0.7);
+    }
+    .img-33 {
+      max-width: 150px;
+    }
+    .member-info {
+      margin-top: 5px;
+    }
+  
+    .name {
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+  
+    .position {
+      font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+    }
+  }
+  
+
+  .slide:focus,
+.slide:active,
+.slide img {
+  outline: none; /* Removes the blue outline */
+  border: none;  /* Ensure no border appears */
+  -webkit-tap-highlight-color: transparent; /* Removes blue highlight on mobile devices */
+}
+
+
+

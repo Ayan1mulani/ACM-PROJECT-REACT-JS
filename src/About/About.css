@@ -1,0 +1,89 @@
+.about-container {
+  background: linear-gradient(135deg, #000000, #0a3d62);
+  color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px 40px 0px 0px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensures internal content stays within bounds */
+}
+
+/* Outer Glow Blur Effect */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: -50px; /* Extends outside the container */
+  left: -50px;
+  right: -50px;
+  height: 200px; /* Spread height of the blur */
+  background: radial-gradient(circle, rgba(58,123,213,0.6) 0%, rgba(10,61,98,0) 60%);
+  filter: blur(50px); /* Controls blur intensity */
+  z-index: -1; /* Pushes blur behind content */
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Optional: Inner Glow at the Top */
+.about-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px; /* Controls how much blur appears inside */
+  background: linear-gradient(180deg, rgba(58,123,213,0.3), transparent);
+  z-index: 0; /* Keeps it behind the content */
+  pointer-events: none;
+}
+  .about-content {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .about-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #4a90e2, #76c7c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .about-content {
+      padding: 20px;
+    }
+  
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-text {
+      font-size: 1rem;
+    }
+  }
+  
