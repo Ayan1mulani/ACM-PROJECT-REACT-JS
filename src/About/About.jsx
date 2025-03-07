@@ -19,7 +19,7 @@ const About = () => {
           <a href="https://chat.whatsapp.com/DStjyiU0SpX79m5DVNRsPc" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaWhatsapp size={40} />
           </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://www.linkedin.com/company/acm-w-student-chapter-mit-adt/" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaLinkedin size={40} />
           </a>
         </div>

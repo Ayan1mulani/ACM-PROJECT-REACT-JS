@@ -34,7 +34,7 @@ export default function TemporaryDrawer() {
   const socialLinks = {
     instagram: 'https://www.instagram.com/acmw_mitsoc',
     whatsapp: 'https://chat.whatsapp.com/DStjyiU0SpX79m5DVNRsPc',
-    linkedin: 'https://www.linkedin.com/company/acm-mitsoc',
+    linkedin: 'https://www.linkedin.com/company/acm-w-student-chapter-mit-adt/',
   };
 
   // Navigation Options
