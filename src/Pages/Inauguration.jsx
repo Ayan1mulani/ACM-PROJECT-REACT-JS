@@ -8,20 +8,20 @@ import './Inauguration.css';
 const events = [
   {
     title: 'ACM Inauguration',
-    date: 'March 15, 2024',
+    date: '31 january, 2025',
     description: 'Grand opening of ACM-W chapter with keynote speakers.',
     images: ['/I7.jpeg', '/I1.jpeg', '/I2.jpeg', '/I3.jpeg', '/I6.jpeg', '/I8.jpeg'],
   },
   {
     title: 'UI-Design Contest',
-    date: 'April 5, 2024',
+    date: '30 january, 2025',
     description: 'Showcase your creativity in UI/UX design with exciting prizes.',
     images: ['/U1.jpeg', '/U2.jpeg', '/U4.jpeg', '/U5.jpeg', '/U6.jpeg', '/U7.jpeg'],
 
   },
   {
     title: 'Club Catalyst',
-    date: 'May 10, 2024',
+    date: '28 feburwary, 2025',
     description: 'A platform for networking and sharing innovative ideas.',
     images: ['/C1.jpeg', '/C2.jpeg', '/C3.jpeg','/A.jpeg']
 
