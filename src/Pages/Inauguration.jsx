@@ -21,7 +21,7 @@ const events = [
   },
   {
     title: 'Club Catalyst',
-    date: '28 feburwary, 2025',
+    date: '28 february, 2025',
     description: 'A platform for networking and sharing innovative ideas.',
     images: ['/C1.jpeg', '/C2.jpeg', '/C3.jpeg','/A.jpeg']
 
