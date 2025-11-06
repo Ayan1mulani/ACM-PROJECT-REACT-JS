@@ -1,6 +1,6 @@
 ACM-W Club WebApp - MIT ADT
 
-🚀 Live Preview: https://acmw-mitadt.netlify.app/
+🚀 Live Preview: https://acmw-mitadt-student-chapter.netlify.app/
 
 Overview
 
