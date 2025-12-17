@@ -1,0 +1,119 @@
+/* General Body and Container Styles */
+.container {
+  background-color: #f7fafc; /* bg-gray-100 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* font-sans */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* p-4 */
+  min-height: 100vh;
+}
+
+/* Form Card Styling */
+.form-card {
+  width: 100%;
+  max-width: 28rem; /* max-w-md */
+  padding: 2rem; /* p-8 */
+  background-color: #ffffff; /* bg-white */
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.form-card > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 1.5rem; /* space-y-6 */
+}
+
+/* Form Header */
+.form-header {
+  text-align: center; /* text-center */
+}
+
+.form-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 800; /* font-extrabold */
+  color: #1a202c; /* text-gray-900 */
+}
+
+.form-subtitle {
+  margin-top: 0.5rem; /* mt-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #4a5568; /* text-gray-600 */
+}
+
+/* Form Element Styling */
+.join-form > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 1.25rem; /* space-y-5 */
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem; /* px-4 py-3 */
+  color: #2d3748; /* text-gray-800 */
+  background-color: #f9fafb; /* bg-gray-50 */
+  border: 1px solid #d1d5db; /* border border-gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: all 0.2s ease-in-out; /* transition */
+}
+
+.input-field::placeholder {
+    color: #a0aec0;
+}
+
+.input-field:focus {
+  outline: none; /* focus:outline-none */
+  border-color: #3b82f6; /* focus:ring-blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 */
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1rem; /* px-4 py-3 */
+  font-weight: 600; /* font-semibold */
+  color: #ffffff; /* text-white */
+  background-color: #2563eb; /* bg-blue-600 */
+  border: none;
+  border-radius: 0.5rem; /* rounded-lg */
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  transition: all 0.3s ease; /* transition-all duration-300 */
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+}
+
+.submit-button:focus {
+  outline: none; /* focus:outline-none */
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #3b82f6; /* focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 */
+}
+
+.submit-button:disabled {
+  background-color: #9ca3af; /* disabled:bg-gray-400 */
+  cursor: not-allowed; /* disabled:cursor-not-allowed */
+  box-shadow: none;
+}
+
+/* Status Message Display */
+.status-message {
+  padding: 1rem; /* p-4 */
+  text-align: center;
+  border-radius: 0.5rem; /* rounded-lg */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+}
+
+.status-error {
+  background-color: #fee2e2; /* bg-red-100 */
+  color: #991b1b; /* text-red-800 */
+}
+
+.status-success {
+  background-color: #dcfce7; /* bg-green-100 */
+  color: #166534; /* text-green-800 */
+}

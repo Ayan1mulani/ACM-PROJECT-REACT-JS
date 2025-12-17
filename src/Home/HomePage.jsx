@@ -2,20 +2,14 @@ import React, { useState } from 'react';
 import './Home.css';
 import CoreTeam from '../Team.jsx/CoreTeam';
 import About from '../About/About';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   const [email, setEmail] = useState('');
+    const navigate = useNavigate();
 
-  // Handle form submission
-  const handleJoinClick = () => {
-    if (email.trim() === '') {
-      alert('Please enter your email.');
-      return;
-    }
 
-    // Open the Google Form in a new tab
-    window.open('https://forms.gle/zd6XUpfzKZapBNpP8', '_blank');
-  };
+
 
   return (
     <div>
@@ -37,7 +31,7 @@ const HomePage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button className='btn-3' onClick={handleJoinClick}>JOIN ACM-W</button>
+            <button className='btn-3' onClick={() => navigate("/join-acm-w")}>JOIN ACM-W</button>
           </div>
         </div>
 
