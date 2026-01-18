@@ -34,13 +34,31 @@ const Navbar = ({ activeItem = 'Home', onNavClick }) => {
 
   return (
     <div
-      className={`fixed top-4 left-1/2 z-50 -translate-x-1/2 transition-all duration-300 ${
+      className={`fixed top-3 left-1/2 z-50 -translate-x-1/2 transition-all duration-300 ${
         visible
           ? 'opacity-100 translate-y-0 pointer-events-auto'
           : 'opacity-0 -translate-y-4 pointer-events-none'
       }`}
     >
-      <nav className="relative flex items-center gap-6 rounded-full border border-white/20 bg-white/10 px-8 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-md">
+      <nav
+        className="
+          relative
+          flex items-center gap-6
+          rounded-full
+          border border-white/20
+          bg-white/10
+          px-8 py-3
+          text-sm font-medium text-white
+          shadow-lg backdrop-blur-md
+
+          /* MOBILE ONLY */
+          max-w-[95vw]
+          overflow-x-auto
+          md:overflow-visible
+          md:max-w-none
+          no-scrollbar
+        "
+      >
         {NAV_ITEMS.map((item) => {
           const isActive = activeItem === item;
 
@@ -48,10 +66,16 @@ const Navbar = ({ activeItem = 'Home', onNavClick }) => {
             <button
               key={item}
               type="button"
-              onClick={() => onNavClick && onNavClick(item)}
-              className="relative text-xs md:text-sm whitespace-nowrap"
+              onClick={() => onNavClick?.(item)}
+              className="
+                relative
+                whitespace-nowrap
+                text-xs md:text-sm
+                px-2 md:px-0
+                flex-shrink-0
+              "
             >
-              {/* Animated underline (NO size change) */}
+              {/* underline */}
               {isActive && (
                 <motion.span
                   layoutId="nav-underline"
