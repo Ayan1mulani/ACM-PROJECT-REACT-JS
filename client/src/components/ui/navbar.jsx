@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const NAV_ITEMS = [
   'Home',
@@ -12,9 +13,15 @@ const NAV_ITEMS = [
 ];
 
 const Navbar = ({ activeItem = 'Home', onNavClick }) => {
-  const [visible, setVisible] = useState(false);
+  const isHomePage = activeItem === 'Home';
+  const [visible, setVisible] = useState(!isHomePage);
 
   useEffect(() => {
+    if (!isHomePage) {
+      setVisible(true);
+      return;
+    }
+
     const handleScroll = () => {
       setVisible(window.scrollY > 80);
     };
@@ -23,7 +30,7 @@ const Navbar = ({ activeItem = 'Home', onNavClick }) => {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   return (
     <div
@@ -33,24 +40,45 @@ const Navbar = ({ activeItem = 'Home', onNavClick }) => {
           : 'opacity-0 -translate-y-4 pointer-events-none'
       }`}
     >
-      <nav className="flex items-center gap-6 rounded-full border border-white/20 bg-white/10 px-8 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-md">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => onNavClick && onNavClick(item)}
-            className={`whitespace-nowrap text-xs md:text-sm transition-colors ${
-              activeItem === item ? 'text-blue-200' : 'hover:text-blue-200 text-white'
-            }`}
-          >
-            {item}
-          </button>
-        ))}
+      <nav className="relative flex items-center gap-6 rounded-full border border-white/20 bg-white/10 px-8 py-3 text-sm font-medium text-white shadow-lg backdrop-blur-md">
+        {NAV_ITEMS.map((item) => {
+          const isActive = activeItem === item;
+
+          return (
+            <button
+              key={item}
+              type="button"
+              onClick={() => onNavClick && onNavClick(item)}
+              className="relative text-xs md:text-sm whitespace-nowrap"
+            >
+              {/* Animated underline (NO size change) */}
+              {isActive && (
+                <motion.span
+                  layoutId="nav-underline"
+                  className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-blue-400"
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 35,
+                  }}
+                />
+              )}
+
+              <span
+                className={`transition-colors ${
+                  isActive
+                    ? 'text-blue-200'
+                    : 'text-white hover:text-blue-200'
+                }`}
+              >
+                {item}
+              </span>
+            </button>
+          );
+        })}
       </nav>
     </div>
   );
 };
 
 export default Navbar;
-
-

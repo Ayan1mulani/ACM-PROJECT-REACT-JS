@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import localVideo from '../../assets/4K 2K 1080p 720p 480p video resolution test.mp4';
+import CountUp from '../../reuseComponents/CountUp';
 
 // ScrollExpandMedia: core scroll-based hero component
 const ScrollExpandMedia = ({
@@ -445,25 +446,31 @@ const MediaContent = ({ mediaType }) => {
           <h3 className="text-lg font-semibold md:text-xl">Impact at a glance</h3>
           <div className="mt-2 grid gap-4 text-center text-sm md:grid-cols-4 md:text-base">
             <div>
-              <p className="text-2xl font-bold md:text-3xl">120+</p>
+            <p className="text-2xl font-bold md:text-3xl">
+  <CountUp end={120} suffix="+" />
+</p>
               <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-300">
                 Active student members
               </p>
             </div>
             <div>
-              <p className="text-2xl font-bold md:text-3xl">25+</p>
+                         <p className="text-2xl font-bold md:text-3xl">
+  <CountUp end={25} suffix="+" />
+</p>
               <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-300">
                 Events & workshops / year
               </p>
             </div>
             <div>
-              <p className="text-2xl font-bold md:text-3xl">5+</p>
+              <p className="text-2xl font-bold md:text-3xl" >5+</p>
               <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-300">
                 Years of ACM-W presence
               </p>
             </div>
             <div>
-              <p className="text-2xl font-bold md:text-3xl">10+</p>
+           <p className="text-2xl font-bold md:text-3xl">
+  <CountUp end={10}  suffix="+" />
+</p>
               <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-300">
                 Partner institutions & sponsors
               </p>
